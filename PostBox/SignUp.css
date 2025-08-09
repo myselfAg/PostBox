@@ -1,0 +1,130 @@
+﻿* {
+    padding: 0;
+    margin: 0;
+    font-family: poppins, Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-image: url("wall.jpg");
+    background-size: cover;
+}
+
+.main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+}
+
+.signup-box {
+    height: 90vh;
+    width: 70vh;
+    background-color: white;
+    border-radius: 2vh;
+    box-shadow: 5px 5px 20px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1vh;
+}
+
+    .signup-box > h1 {
+        color: #1F7A8C;
+        font-size: 40px;
+    }
+
+.text-boxes {
+    width: 50vh;
+    height: 4vh;
+    margin-top: 2vh;
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid black;
+    font-size: small;
+    outline: none;
+    z-index: 8;
+    &::placeholder
+    {
+        font-size: small;
+    }
+}
+
+#male {
+    margin-top: 20px;
+    accent-color: #1F7A8C;
+}
+#female {
+    accent-color: #1F7A8C;
+}
+#others {
+    accent-color: #1F7A8C;
+}
+
+.sex {
+    font-size: small;
+    cursor: pointer;
+    margin-right: 3vh;
+}
+
+#file::file-selector-button {
+    background: transparent;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-top: 20px;
+    height: 20px;
+}
+
+    #file::file-selector-button:hover {
+        background-color: #1F7A8C;
+        border: 2px solid #1F7A8C;
+        transition: 0.2s ease-in-out;
+        color: white;
+    }
+
+#buttons {
+    width: 50vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*.back {
+    height: 5vh;
+    width: 10vh;
+    border: 0;
+    border-radius: 20px;
+    margin-top: 4vh;
+    background-color: #1F7A8C;
+    color: white;
+    font-size: small;
+    cursor: pointer;
+    &:hover
+    {
+        opacity: 0.75;
+    }
+    &:active {
+        translate: 0 2px;
+    }
+}*/
+.bt {
+    height: 5vh;
+    width: 20vh;
+    border: 0;
+    border-radius: 20px;
+    margin-top: 4vh;
+    background-color: #1F7A8C;
+    color: white;
+    font-size: small;
+    cursor: pointer;
+    &:hover
+
+    {
+        opacity: 0.75;
+    }
+
+    &:active {
+        translate: 0 2px;
+    }
+}

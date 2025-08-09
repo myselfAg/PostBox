@@ -1,0 +1,124 @@
+﻿* {
+    padding: 0;
+    margin: 0;
+    font-family: poppins, Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #fff;
+}
+
+.header {
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    .header > img {
+        height: 7vh;
+        width: 7vh;
+        border-radius: 30%;
+        margin-left: 3vh;
+    }
+
+#pages {
+    display: flex;
+    gap: 21vh;
+    list-style-type: none;
+    margin-right: 10vh;
+    font-size: small;
+}
+
+    #pages > li {
+        cursor: pointer;
+/*        font-weight: bold;*/
+    }
+        #pages > li:hover {
+            transition: ease-in-out .3s;
+            border-bottom: 1px solid black;
+        }
+        #pages > li:first-child {
+            border-bottom: 1px solid black;
+        }
+
+#login {
+    text-decoration: none;
+    color: black;
+}
+
+.main {
+    height: 90vh;
+    width: 100vw;
+    display: flex;
+}
+
+.left {
+    height: 100%;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-div {
+    height: 40vw;
+    width: 40vw;
+    background-size: cover;
+    background-position: left;
+    border-radius: 5vh;
+}
+
+.img-part {
+    height: 30vw;
+    width: 40vw;
+    background-size: cover;
+    background-position: left;
+    border-radius: 5vh;
+    box-shadow: 0 0 10px black;
+}
+
+.right {
+    height: 100%;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+    .right > h1 {
+        font-size: 60px;
+        letter-spacing: 3vh;
+        color: #1F7A8C;
+    }
+
+    .right > h3 {
+        font-size: 30px;
+        letter-spacing: 1vh;
+    }
+
+    .right > p {
+        font-size: 15px;
+        margin-top: 1vh;
+    }
+.signUp {
+    margin-top: 5vh;
+    height: 5vh;
+    width: 20vh;
+    border-radius: 50px;
+    border: 0;
+    background-color: #1F7A8C;
+    color: white;
+    font-size: small;
+    cursor: pointer;
+    &:hover
+    {
+        opacity: .75;
+        transition: .2s;
+    }
+
+    &:active {
+        translate: 0 5px;
+    }
+}
