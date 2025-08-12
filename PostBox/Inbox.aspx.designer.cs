@@ -66,7 +66,7 @@ namespace PostBox
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button compose;
+        protected global::System.Web.UI.WebControls.ImageButton compose;
 
         /// <summary>
         /// inboBt control.
@@ -75,7 +75,7 @@ namespace PostBox
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button inboBt;
+        protected global::System.Web.UI.WebControls.ImageButton inboBt;
 
         /// <summary>
         /// sent control.
@@ -84,7 +84,7 @@ namespace PostBox
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button sent;
+        protected global::System.Web.UI.WebControls.ImageButton sent;
 
         /// <summary>
         /// draft control.
@@ -93,7 +93,7 @@ namespace PostBox
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button draft;
+        protected global::System.Web.UI.WebControls.ImageButton draft;
 
         /// <summary>
         /// settings control.
@@ -102,7 +102,7 @@ namespace PostBox
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button settings;
+        protected global::System.Web.UI.WebControls.ImageButton settings;
 
         /// <summary>
         /// mails control.

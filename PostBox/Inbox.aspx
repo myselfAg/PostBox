@@ -28,13 +28,13 @@
         </div>
         <div class="bottom">
             <div class="nav">
-                <asp:Button ID="compose" CssClass="more edit" runat="server" Text="Compose" OnClick="compose_Click" />
+                
 
-
-                <asp:Button ID="inboBt" CssClass="more inbox" runat="server" Text="Inbox" OnClick="inboBt_Click" />
-                <asp:Button ID="sent" CssClass="more sent" runat="server" Text="Sent" OnClick="sent_Click" />
-                <asp:Button ID="draft" CssClass="more draft" runat="server" Text="Draft" OnClick="draft_Click" />
-                <asp:Button ID="settings" CssClass="more settings" runat="server" Text="Settings" OnClick="settings_Click" />
+                <asp:ImageButton ID="compose" runat="server" CssClass="more edit" Text="Compose" OnClick="compose_Click" ImageUrl="~/mailPics/compose.jpg" />
+                <asp:ImageButton ID="inboBt" runat="server" CssClass="more inbox" OnClick="inboBt_Click" ImageUrl="~/mailPics/inbox.jpg"/>
+                <asp:ImageButton ID="sent" CssClass="more sent" runat="server" OnClick="sent_Click" ImageUrl="~/mailPics/sent.jpg"/>
+                <asp:ImageButton  ID="draft" CssClass="more draft" runat="server" Text="Draft" OnClick="draft_Click" ImageUrl="~/mailPics/draft.jpg"/>
+                <asp:ImageButton ID="settings" CssClass="more settings" runat="server" Text="Settings" OnClick="settings_Click" ImageUrl="~/mailPics/settings.jpg"/>
 
                 <h1>POSTBOX</h1>
             </div>
