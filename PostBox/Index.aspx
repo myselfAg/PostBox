@@ -19,10 +19,6 @@
       <ul id="pages">
         <li>
             <asp:HyperLink ID="home" runat="server" CssClass="links">Home</asp:HyperLink></li>
-        <!-- <li>
-            <asp:HyperLink ID="contact" runat="server" CssClass="links">Contact</asp:HyperLink></li>
-        <li>
-            <asp:HyperLink ID="about" runat="server" CssClass="links">About</asp:HyperLink></li> -->
         <li id="login-button"> 
             <asp:HyperLink ID="login" runat="server" CssClass="links" NavigateUrl="~/Login.aspx" >Login</asp:HyperLink></li>
       </ul>
