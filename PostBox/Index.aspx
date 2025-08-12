@@ -16,6 +16,7 @@
 <body>
     <div class="header">
       <asp:Image ID="logo" runat="server" ImageUrl="~/UploadedImages/logo.png" AlternateText="postbox" />
+
       <ul id="pages">
         <li>
             <asp:HyperLink ID="home" runat="server" CssClass="links">Home</asp:HyperLink></li>
