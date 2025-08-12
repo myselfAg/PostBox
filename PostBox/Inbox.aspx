@@ -17,20 +17,36 @@
     <form class="main" runat="server">
         <div class="top">
             <div class="dp">
-                <asp:Image ID="img" runat="server" CssClass="dp-img" />
+                <asp:ImageButton ID="img" runat="server" CssClass="dp-img" OnClick="img_Click"/>
+                <div id="userInfo" class="hide" runat="server">
+                    <div class="userInfo">
+                        <h1>User Info</h1>
+                        <div class="allDetails" >
+                            <asp:Label ID="username" runat="server" Text="Label"></asp:Label>
+                            <asp:Label ID="name" runat="server" Text="Label"></asp:Label>
+                            <asp:Label ID="dob" runat="server" Text="Label"></asp:Label>
+                            <asp:Label ID="email" runat="server" Text="Label"></asp:Label>
+                            <asp:Label ID="mobNo" runat="server" Text="Label"></asp:Label>
+                            <asp:Label ID="gender" runat="server" Text="Label"></asp:Label>
+                        </div>
+                        <div class="buttonsUserInfo">
+                            <asp:Button ID="userInfoBack" CssClass="btUserInfo" runat="server" Text="Back" OnClick="userInfoBack_Click" />
+                        </div>
+                    </div> 
+                </div>
             </div>
             <asp:Label ID="user" runat="server" Text="User"></asp:Label>
             <div class="search-sec">
                 <asp:TextBox ID="search" runat="server" name="search" placeholder="Search"></asp:TextBox>
-                <asp:Button ID="searcBtn" runat="server" Text="Search" CssClass="searchBtn" OnClick="searcBtn_Click" />
+                <asp:ImageButton ID="searcBtn" CssClass="searchBtn" runat="server" Text="Button" ImageUrl="~/mailPics/search.jpg" OnClick="searcBtn_Click" />
             </div>
-            <asp:Button ID="logout" runat="server" Text="Logout" CssClass="logout" OnClick="logout_Click" />
+            <asp:ImageButton ID="logout" runat="server" Text="Logout" CssClass="logout" OnClick="logout_Click" ImageUrl="~/mailPics/logout.jpg"/>
         </div>
         <div class="bottom">
             <div class="nav">
                 
 
-                  <asp:ImageButton ID="compose" runat="server" CssClass="more edit" Text="Compose" OnClick="compose_Click" ImageUrl="~/mailPics/compose.jpg" />
+                <asp:ImageButton ID="compose" runat="server" CssClass="more edit" Text="Compose" OnClick="compose_Click" ImageUrl="~/mailPics/compose.jpg" />
                 <asp:ImageButton ID="inboBt" runat="server" CssClass="more inbox" OnClick="inboBt_Click" ImageUrl="~/mailPics/inbox.jpg"/>
                 <asp:ImageButton ID="sent" CssClass="more sent" runat="server" OnClick="sent_Click" ImageUrl="~/mailPics/sent.jpg"/>
                 <asp:ImageButton  ID="draft" CssClass="more draft" runat="server" Text="Draft" OnClick="draft_Click" ImageUrl="~/mailPics/draft.jpg"/>
@@ -132,7 +148,7 @@
                         </table>
                         <div class="buttons">
                             <asp:Button ID="back" CssClass="moreBt" runat="server" Text="Back" OnClick="back_Click" />
-                            <asp:Button ID="clear" CssClass="moreBt" runat="server" Text="Clear" OnClick="clear_Click1" />
+                            <asp:Button ID="clear" CssClass="moreBt" runat="server" Text="Draft" OnClick="clear_Click1" />
                             <asp:Button ID="send" CssClass="bt" runat="server" Text="Send" OnClick="send_Click" />
 
                         </div>

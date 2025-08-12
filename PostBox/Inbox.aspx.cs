@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Globalization;
 using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
@@ -24,7 +25,10 @@ namespace PostBox
              
             img.ImageUrl = Session["file"].ToString();
             img.Attributes.Add("style", "height: 6vh; width: 6vh; border-radius: 50%;");
-            user.Text = Session["name"].ToString();
+
+            TextInfo textInfo = CultureInfo.CurrentCulture.TextInfo;
+
+            user.Text = textInfo.ToTitleCase(Session["name"].ToString().ToLower());
 
             DataSet ds = Class1.fetch("select fromWhom, dateTime, subject, body from inbox where toWhom = '" + Session["email"].ToString() + "' order by dateTime desc");
             if (ds.Tables[0].Rows.Count != 0)
@@ -127,7 +131,6 @@ namespace PostBox
         {
             if(sentSection.Attributes["class"] == "hide")
             {
-                //string dateTime = Convert.ToDateTime(mails.SelectedRow.Cells[2].Text).ToString("dd-MM-yyyy HH:mm:ss");
                 DataSet ds = Class1.fetch("select id from inbox where (toWhom = '" + Session["email"] + "' and fromWhom = '" + mails.SelectedRow.Cells[1].Text + "') and (subject = '" + mails.SelectedRow.Cells[3].Text + "' and body = '" + mails.SelectedRow.Cells[4].Text + "')");
                 Class1 c = new Class1();
                 bool t;
@@ -172,6 +175,16 @@ namespace PostBox
         // +++++++++++++++++++++++++++++ Compose Window Back Button +++++++++++++++++++++++++++++++
         protected void back_Click(object sender, EventArgs e)
         {
+            to.Text = "";
+            subject.Text = "";
+            body.Text = "";
+            composeHide.Attributes["class"] = "hide";
+        }
+
+        // +++++++++++++++++++++++++++++ Compose Window Draft Button +++++++++++++++++++++++++++++++
+        protected void clear_Click1(object sender, EventArgs e)
+        {
+            
             bool t;
             Class1 c = new Class1();
             DataSet maxIdSet = Class1.fetch("select max(id) from drafts");
@@ -190,7 +203,7 @@ namespace PostBox
 
             if (to.Text != "" && (subject.Text != "" || body.Text != ""))
             {
-                if(subject.Text == "")
+                if (subject.Text == "")
                 {
                     subject.Text = "[Empty]";
                 }
@@ -220,15 +233,6 @@ namespace PostBox
                 subject.Text = "";
                 body.Text = "";
             }
-            composeHide.Attributes["class"] = "hide";
-        }
-
-        // +++++++++++++++++++++++++++++ Compose Window Clear Button +++++++++++++++++++++++++++++++
-        protected void clear_Click1(object sender, EventArgs e)
-        {
-            to.Text = "";
-            subject.Text = "";
-            body.Text = "";
         }
 
         // +++++++++++++++++++++++++++++ Compose Window Send Button +++++++++++++++++++++++++++++++
@@ -398,6 +402,23 @@ namespace PostBox
             }
         }
 
-        
+        protected void img_Click(object sender, ImageClickEventArgs e)
+        {
+            TextInfo textInfo = CultureInfo.CurrentCulture.TextInfo;
+            
+            userInfo.Attributes["class"] = "";
+
+            username.Text = "Username - " + textInfo.ToTitleCase(Session["username"].ToString().ToLower());
+            name.Text = "Name - " + textInfo.ToTitleCase(Session["name"].ToString().ToLower());
+            dob.Text = "Date of Birth - " + textInfo.ToTitleCase(Session["dob"].ToString().ToLower());
+            email.Text = "Email - " + Session["email"].ToString();
+            mobNo.Text = "Mobile No. - " + textInfo.ToTitleCase(Session["mobNo"].ToString().ToLower());
+            gender.Text = "Gender - " + textInfo.ToTitleCase(Session["gender"].ToString().ToLower());
+        }
+
+        protected void userInfoBack_Click(object sender, EventArgs e)
+        {
+            userInfo.Attributes["class"] = "hide";
+        }
     }
 }

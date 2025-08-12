@@ -23,8 +23,11 @@ namespace PostBox
                 if (ds.Tables[0].Rows[0][6].ToString() == pass.Text.ToString())
                 {
                     Session["name"] = ds.Tables[0].Rows[0][0].ToString() + " " + ds.Tables[0].Rows[0][1].ToString();
+                    Session["dob"] = ds.Tables[0].Rows[0][2].ToString();
                     Session["email"] = ds.Tables[0].Rows[0][3].ToString();
                     Session["mobNo"] = ds.Tables[0].Rows[0][4].ToString();
+                    Session["username"] = ds.Tables[0].Rows[0][5].ToString();
+                    Session["gender"] = ds.Tables[0].Rows[0][7].ToString();
                     Session["file"] = ds.Tables[0].Rows[0][8].ToString();
                     Response.Redirect("~/Inbox.aspx?");
                 }

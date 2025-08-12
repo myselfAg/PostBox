@@ -33,12 +33,12 @@
     width: 70vw;
     display: flex;
     justify-content: center;
-    gap: 1vw;
+    gap: .3vw;
 }
 
 #search {
     height: 6vh;
-    width: 70vw;
+    width: 55vw;
     background: #f2f2f2;
     border: 0;
     border-radius: 5vh;
@@ -46,18 +46,16 @@
     font-size: small;
 }
 .searchBtn {
-    display: none;
     height: 6vh;
     width: 6vh;
-    border: 1px solid #1F7A8C;
     border-radius: 50%;
-    background-color: #1F7A8C;
+    border: 1px solid gray ;
     color: white;
     font-size: x-small;
     cursor: pointer;
     &:hover
     {
-        opacity: 0.75;
+        opacity: 0.5;
     }
 
     &:active {
@@ -67,12 +65,12 @@
 }
 
 .logout {
-    height: 6vh;
-    width: 20vh;
-    border: 1px solid #1F7A8C;
+    height: 8vh;
+    width: 8vh;
+/*    border: 1px solid #f2f2f2;*/
     border-radius: 3vh;
-    background-color: #1F7A8C;
-    color: white;
+    background-color: #f2f2f2;
+/*    color: white;*/
     font-size: small;
     margin-right: 2vh;
     cursor: pointer;
@@ -121,13 +119,13 @@
     cursor: pointer;
     &:hover
 
-{
-    opacity: 0.75;
-}
+    {
+        opacity: 0.5;
+    }
 
-&:active {
-    translate: 0 2px;
-}
+    &:active {
+        translate: 0 2px;
+    }
 
 }
 
@@ -167,15 +165,6 @@
     box-sizing: border-box;
 }
 
-/*.content-heading {
-    height: 8vh;
-    width: 94vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: black;
-    border-bottom: 1px solid black;
-}*/
 .inbox-data {
     height: 80vh;
     width: 94vw;
@@ -225,39 +214,6 @@
     }
 
 }
-
-/* ++++++++++++++++++++++++++++++++ All Mails ++++++++++++++++++++++++++++++++++++++++++++ */
-
-.allMails {
-    width: 94vw;
-    border-collapse: collapse;
-    font-size: 16px;
-    border: none;
-    table-layout: fixed;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-    .allMails th {
-        display: none;
-    }
-
-    .allMails td {
-        width: 31vw;
-        padding: 2vh 0 2vh 0;
-        color: #333;
-        border: none;
-        text-wrap: nowrap;
-    }
-
-    .allMails tr:nth-child(even) {
-        background-color: #f2f2f2;
-    }
-
-    .allMails tr:hover {
-        box-shadow: 1px 1px 5px black;
-    }
 
 /* +++++++++++ Hide ++++++++++++*/
 
@@ -325,8 +281,8 @@
 .selectedMailBody {
     height: 70vh;
     width: 93vw;
-    border: 1px solid black;
-    background-color: white;
+/*    border: 1px solid black;*/
+    background-color: #f2f2f2;
     overflow: auto;
 }
 .selectedMailBodyText {
@@ -587,7 +543,7 @@
 .draftMails {
     width: 94vw;
     border-collapse: collapse;
-    font-size: 16px;
+    font-size: 13px;
     border: none;
     table-layout: fixed;
     white-space: nowrap;
@@ -609,10 +565,107 @@
         text-wrap: nowrap;
     }
 
-    .draftMails tr:nth-child(even) {
-        background-color: #f2f2f2;
+    .draftMails tr {
+        border-bottom: 1px solid gray;
     }
 
-    .draftMails tr:hover {
-        box-shadow: 1px 1px 5px black;
+        .draftMails tr:first-child {
+            border-top: 1px solid gray;
+        }
+
+
+        .draftMails tr:hover {
+            box-shadow: 0px 0px 10px darkgray;
+        }
+
+/* ++++++++++++++++++++++++++++++++ All Mails ++++++++++++++++++++++++++++++++++++++++++++ */
+
+.allMails {
+    width: 94vw;
+    border-collapse: collapse;
+    font-size: 13px;
+    border: none;
+    table-layout: fixed;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+    .allMails th {
+        display: none;
     }
+
+    .allMails td {
+        width: 31vw;
+        padding: 2vh 0 2vh 0;
+        color: #333;
+        border: none;
+        text-wrap: nowrap;
+    }
+    .allMails tr {
+        border-bottom: 1px solid gray;
+    }
+    .allMails tr:first-child {
+        border-top: 1px solid gray;
+    }
+
+
+    .allMails tr:hover {
+        box-shadow: 0px 0px 10px darkgray ;
+    }
+
+.userInfo {
+    height: 50vh;
+    width: 30vw;
+    position: absolute;
+    top: 10vh;
+    left: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 1vh;
+    background-color: white;
+    box-shadow: 2px 2px 10px black;
+    z-index: 11;
+}
+
+    .userInfo > h1 {
+        color: #1F7A8C;
+        font-size: 40px;
+        margin-top: 5vh;
+        margin-bottom: 2vh;
+    }
+
+.allDetails {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.buttonsUserInfo {
+    display: flex;
+    justify-content: center;
+    width: 50vh;
+}
+
+.btUserInfo {
+    height: 5vh;
+    width: 20vh;
+    border: 0;
+    border-radius: 20px;
+    margin-top: 7vh;
+    background-color: #1F7A8C;
+    font-size: small;
+    color: white;
+    cursor: pointer;
+    &:hover
+
+    {
+        opacity: 0.75;
+    }
+
+    &:active {
+        translate: 0 2px;
+    }
+}
