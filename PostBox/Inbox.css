@@ -609,9 +609,9 @@
         text-wrap: nowrap;
     }
 
-/*    .draftMails tr:nth-child(even) {
+    .draftMails tr:nth-child(even) {
         background-color: #f2f2f2;
-    }*/
+    }
 
     .draftMails tr:hover {
         box-shadow: 1px 1px 5px black;
