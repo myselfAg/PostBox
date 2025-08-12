@@ -40,18 +40,18 @@ namespace PostBox
                 mails.DataBind();
             }
         }
-        protected void mails_RowCommand(object sender, GridViewCommandEventArgs e)
-        {
-            if (e.CommandName == "Select")
-            {
-                int index = Convert.ToInt32(e.CommandArgument);
-                GridViewRow row = mails.Rows[index];
-                string mailId = mails.DataKeys[index].Value.ToString();
+        //protected void mails_RowCommand(object sender, GridViewCommandEventArgs e)
+        //{
+        //    if (e.CommandName == "Select")
+        //    {
+        //        int index = Convert.ToInt32(e.CommandArgument);
+        //        GridViewRow row = mails.Rows[index];
+        //        string mailId = mails.DataKeys[index].Value.ToString();
 
-                // Redirect or display details using mailId
-                Response.Redirect("ShowDetails.aspx?id=" + mailId);
-            }
-        }
+        //        // Redirect or display details using mailId
+        //        Response.Redirect("ShowDetails.aspx?id=" + mailId);
+        //    }
+        //}
 
         // +++++++++++++++++++++++++++++ Search Bar +++++++++++++++++++++++++++++++
         protected void searcBtn_Click(object sender, EventArgs e)
@@ -98,6 +98,34 @@ namespace PostBox
             selectedMailSubjectText.Text = "Subject: " + mails.SelectedRow.Cells[3].Text;
             selectedMailBodyText.Text = mails.SelectedRow.Cells[4].Text;
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         // ++++++++++++++++++++++++++++++++ Open Selected Sent Mail ++++++++++++++++++++++++++++++++++++++++
         protected void sentMails_SelectedIndexChanged(object sender, EventArgs e)
