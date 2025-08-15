@@ -104,29 +104,6 @@ namespace PostBox
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         // ++++++++++++++++++++++++++++++++ Open Selected Sent Mail ++++++++++++++++++++++++++++++++++++++++
         protected void sentMails_SelectedIndexChanged(object sender, EventArgs e)
         {

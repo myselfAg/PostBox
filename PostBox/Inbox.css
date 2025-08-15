@@ -281,7 +281,6 @@
 .selectedMailBody {
     height: 70vh;
     width: 93vw;
-/*    border: 1px solid black;*/
     background-color: #f2f2f2;
     overflow: auto;
 }

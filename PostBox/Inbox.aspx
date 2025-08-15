@@ -62,13 +62,13 @@
 
                 <!-- Inbox Maiils -->
                 <div class="draftMails">
-                   <asp:GridView ID="mails" runat="server" CssClass="allMails"
-    AutoGenerateSelectButton="false"
-    OnSelectedIndexChanged="mails_SelectedIndexChanged">
-    <Columns>
-        <asp:CommandField ShowSelectButton="true" SelectText="Open Mail" HeaderText="" ItemStyle-CssClass="select-link" />
-    </Columns>
-</asp:GridView>
+                  <asp:GridView ID="mails" runat="server" CssClass="allMails"
+                        AutoGenerateSelectButton="false"
+                        OnSelectedIndexChanged="mails_SelectedIndexChanged">
+                        <Columns>
+                            <asp:CommandField ShowSelectButton="true" SelectText="Open Mail" HeaderText="" ItemStyle-CssClass="select-link" />
+                        </Columns>
+                    </asp:GridView>
                 </div>
                 <!-- Sent -->
                 <div class="hide" id="sentSection" runat="server">
