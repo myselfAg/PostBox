@@ -296,6 +296,7 @@
     font-size: small;
     color: white;
     cursor: pointer;
+    margin-top: 2vh;
     &:hover
     {
         opacity: 0.75;
